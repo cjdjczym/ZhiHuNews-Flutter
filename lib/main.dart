@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: '知乎日报',
       theme: ThemeData(
-        accentColor: Colors.purple,
+        accentColor: Colors.white, // 设置listView波浪的颜色
       ),
       home: HomePage(),
     );

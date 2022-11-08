@@ -21,11 +21,13 @@ class Story {
   final String url;
   final String hint;
   final String image;
+  final String imageHue; // 轮播图下方渐变颜色
 
   Story.fromJson(Map<String, dynamic> json)
       : this.title = json['title'],
         this.url = json['url'],
         this.hint = json['hint'],
+        this.imageHue = json['image_hue'],
         // 这里需要做个判断，[top_stories]中的字段为`image`，而[stories]中的字段为`images`
         this.image = (json['images'] == null) ? json['image'] :
           List<String>.from(json["images"]).first;
